@@ -27,7 +27,7 @@ namespace Euler.Console
             var primeFinder = new PrimeFactorFinder(600851475143);
             System.Console.WriteLine(
                 "The largest prime factor of the number 600851475143 is {0}",
-                primeFinder.GetPrimeFactors().Last());
+                primeFinder.GetPrimeFactors().Max());
 
             System.Console.ReadLine();
         }
