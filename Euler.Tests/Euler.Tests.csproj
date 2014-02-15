@@ -45,8 +45,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ProblemOneTests.cs" />
-    <Compile Include="ProblemTwoTests.cs" />
+    <Compile Include="NaturalNumberCalculatorTests.cs" />
+    <Compile Include="FibonacciGeneratorTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

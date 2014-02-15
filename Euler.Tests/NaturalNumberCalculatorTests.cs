@@ -8,15 +8,15 @@ using Xunit;
 
 namespace Euler.Tests
 {
-    public class ProblemOneTests
+    public class NaturalNumberCalculatorTests
     {
         private int[] _range = Enumerable.Range(1, 9).ToArray();
         
         private int[] _multiples = new int[] { 3, 5 };        
         
         private NaturalNumberCalculator _sut;
-        
-        public ProblemOneTests()
+
+        public NaturalNumberCalculatorTests()
         {
             this._sut = new NaturalNumberCalculator();
         }
