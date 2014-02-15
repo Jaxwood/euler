@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="FibonacciGenerator.cs" />
     <Compile Include="NaturalNumberCalculator.cs" />
+    <Compile Include="PrimeFactorFinder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

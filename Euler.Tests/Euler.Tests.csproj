@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="NaturalNumberCalculatorTests.cs" />
     <Compile Include="FibonacciGeneratorTests.cs" />
+    <Compile Include="PrimeFactorTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
