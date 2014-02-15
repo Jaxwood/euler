@@ -45,13 +45,17 @@ namespace Euler.Lib
         {
             prime = prime + 1;
 
-            while (!IsPrime(prime))
+            while (!IsPrime(prime) && !IsSameAsNumber(prime))
             {
                 prime = prime + 1;
-                if (prime == this._number) return this._number;
             }
 
             return prime;
+        }
+
+        private bool IsSameAsNumber(long prime)
+        {
+            return prime == this._number;
         }
 
         private bool IsPrime(long number) 
