@@ -39,6 +39,12 @@ namespace Euler.Console
             System.Console.WriteLine(
                 "Smallest positive number that is evenly divisible by all of the numbers from 1 to 20 is {0}",
                 lowestDividableNumberFinder.GetLowestNumberDividableWith(Enumerable.Range(1,20).ToArray()));
+
+            var sumOfSquaresCalculator = new SumOfSquaresCalculator();
+            System.Console.WriteLine(
+                "Th difference between the sum of the squares of the first one hundred natural numbers and the square of the sum is {0}",
+                sumOfSquaresCalculator.GetSum(Enumerable.Range(1, 100).ToArray()));
+
             System.Console.ReadLine();
         }
     }
