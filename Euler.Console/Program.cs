@@ -1,6 +1,7 @@
 ﻿using Euler.Lib;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -34,6 +35,10 @@ namespace Euler.Console
                 "Largest paldindrome of the product of two 3 digits numbers is {0}",
                 palindromeFinder.GetLargestPalindrome(3));
 
+            var lowestDividableNumberFinder = new LowestDividableNumberFinder();
+            System.Console.WriteLine(
+                "Smallest positive number that is evenly divisible by all of the numbers from 1 to 20 is {0}",
+                lowestDividableNumberFinder.GetLowestNumberDividableWith(Enumerable.Range(1,20).ToArray()));
             System.Console.ReadLine();
         }
     }
