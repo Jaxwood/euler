@@ -29,6 +29,11 @@ namespace Euler.Console
                 "The largest prime factor of the number 600851475143 is {0}",
                 primeFinder.GetPrimeFactors().Max());
 
+            var palindromeFinder = new PalindromeFinder();
+            System.Console.WriteLine(
+                "Largest paldindrome of the product of two 3 digits numbers is {0}",
+                palindromeFinder.GetLargestPalindrome(3));
+
             System.Console.ReadLine();
         }
     }
