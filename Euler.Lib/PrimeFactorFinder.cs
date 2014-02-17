@@ -8,10 +8,12 @@ namespace Euler.Lib
     public class PrimeFactorFinder
     {
         private long _number;
+        private PrimeUtil _primeUtil;
 
-        public PrimeFactorFinder(long number)
+        public PrimeFactorFinder(long number, PrimeUtil primeUtil)
         {
             this._number = number;
+            this._primeUtil = primeUtil;
         }
 
         public long[] GetPrimeFactors()
@@ -45,7 +47,7 @@ namespace Euler.Lib
         {
             prime = prime + 1;
 
-            while (!IsPrime(prime) && !IsSameAsNumber(prime))
+            while (!this._primeUtil.IsPrime(prime) && !IsSameAsNumber(prime))
             {
                 prime = prime + 1;
             }
@@ -58,11 +60,6 @@ namespace Euler.Lib
             return prime == this._number;
         }
 
-        private bool IsPrime(long number) 
-        {
-            if (number <= 3) return true;
-
-            return (number % 2 != 0 && number % 3 != 0);
-        }
+        
     }
 }

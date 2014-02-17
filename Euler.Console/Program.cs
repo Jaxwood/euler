@@ -25,7 +25,7 @@ namespace Euler.Console
                 "Fibonacci whose values do not exceed four million - the sum of even valued terms: {0}", 
                 fib.GetSum());
 
-            var primeFinder = new PrimeFactorFinder(600851475143);
+            var primeFinder = new PrimeFactorFinder(600851475143, new PrimeUtil());
             System.Console.WriteLine(
                 "The largest prime factor of the number 600851475143 is {0}",
                 primeFinder.GetPrimeFactors().Max());
@@ -42,9 +42,14 @@ namespace Euler.Console
 
             var sumOfSquaresCalculator = new SumOfSquaresCalculator();
             System.Console.WriteLine(
-                "Th difference between the sum of the squares of the first one hundred natural numbers and the square of the sum is {0}",
+                "The difference between the sum of the squares of the first one hundred natural numbers and the square of the sum is {0}",
                 sumOfSquaresCalculator.GetSum(Enumerable.Range(1, 100).ToArray()));
 
+            var primeGenerator = new PrimeGenerator(new PrimeUtil());
+            System.Console.WriteLine(
+                "The 10001 prime is {0}",
+                primeGenerator.GetPrimes(10001).Last());
+            
             System.Console.ReadLine();
         }
     }

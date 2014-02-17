@@ -50,6 +50,7 @@
     <Compile Include="FibonacciGeneratorTests.cs" />
     <Compile Include="PalindromeFinderTests.cs" />
     <Compile Include="PrimeFactorTests.cs" />
+    <Compile Include="PrimeGeneratorTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SumOfSquaresTests.cs" />
   </ItemGroup>
