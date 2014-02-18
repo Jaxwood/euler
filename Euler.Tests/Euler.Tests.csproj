@@ -45,6 +45,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GridProductFinderTests.cs" />
     <Compile Include="LargestProductFinderTests.cs" />
     <Compile Include="LowestDividableNumberFinderTests.cs" />
     <Compile Include="NaturalNumberCalculatorTests.cs" />
