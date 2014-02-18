@@ -25,10 +25,10 @@ namespace Euler.Console
                 "Fibonacci whose values do not exceed four million - the sum of even valued terms: {0}", 
                 fib.GetSum());
 
-            var primeFinder = new PrimeFactorFinder(600851475143, new PrimeUtil());
+            var primeFactorFinder = new PrimeFactorFinder(600851475143, new PrimeUtil());
             System.Console.WriteLine(
                 "The largest prime factor of the number 600851475143 is {0}",
-                primeFinder.GetPrimeFactors().Max());
+                primeFactorFinder.GetPrimeFactors().Max());
 
             var palindromeFinder = new PalindromeFinder();
             System.Console.WriteLine(
@@ -59,6 +59,11 @@ namespace Euler.Console
             System.Console.WriteLine(
                 "The product of a, b and c where the sum is 1000 is {0}",
                 pythagoreanTripletFinder.GetTriplets(1000).Aggregate(1, (a,c) => a *= c));
+
+            var primeFinder = new PrimeFinder(new PrimeUtil());
+            System.Console.WriteLine(
+                "The sum of all primes below 2000000 is {0}",
+                primeFinder.GetSumOfPrimes(2000000));
 
             System.Console.ReadLine();
         }

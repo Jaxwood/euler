@@ -45,6 +45,7 @@
     <Compile Include="NaturalNumberCalculator.cs" />
     <Compile Include="PalindromeFinder.cs" />
     <Compile Include="PrimeFactorFinder.cs" />
+    <Compile Include="PrimeFinder.cs" />
     <Compile Include="PrimeGenerator.cs" />
     <Compile Include="PrimeUtil.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
