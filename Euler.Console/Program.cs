@@ -25,10 +25,10 @@ namespace Euler.Console
                 "Fibonacci whose values do not exceed four million - the sum of even valued terms: {0}",
                 fib.GetSum());
 
-            var primeFactorFinder = new PrimeFactorFinder(600851475143, new PrimeUtil());
+            var primeFactorFinder = new PrimeFactorFinder(new PrimeUtil());
             System.Console.WriteLine(
                 "The largest prime factor of the number 600851475143 is {0}",
-                primeFactorFinder.GetPrimeFactors().Max());
+                primeFactorFinder.GetPrimeFactors(600851475143).Max());
 
             var palindromeFinder = new PalindromeFinder();
             System.Console.WriteLine(
@@ -69,6 +69,11 @@ namespace Euler.Console
             System.Console.WriteLine(
                 "Greatest adjacent product in grid is {0}",
                 gridProductFinder.GetProduct(GetGrid()));
+
+            var triangularNumber = new TriangularNumber(new PrimeFactorFinder(new PrimeUtil()));
+            System.Console.WriteLine(
+                "Lowest triangular number with 500 divisors is {0}",
+                triangularNumber.GetLowestTriangularNumber(500));
 
             System.Console.ReadLine();
         }

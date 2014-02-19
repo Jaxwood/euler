@@ -10,14 +10,14 @@ namespace Euler.Lib
         private long _number;
         private PrimeUtil _primeUtil;
 
-        public PrimeFactorFinder(long number, PrimeUtil primeUtil)
+        public PrimeFactorFinder(PrimeUtil primeUtil)
         {
-            this._number = number;
             this._primeUtil = primeUtil;
         }
 
-        public long[] GetPrimeFactors()
+        public long[] GetPrimeFactors(long number)
         {
+            this._number = number;
             return GetPrimes(new long[] {}, 2);
         }
 

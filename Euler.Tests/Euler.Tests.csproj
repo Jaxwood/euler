@@ -57,6 +57,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PythagoreanTripletTests.cs" />
     <Compile Include="SumOfSquaresTests.cs" />
+    <Compile Include="TriangularNumberTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

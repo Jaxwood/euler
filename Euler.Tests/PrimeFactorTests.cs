@@ -17,8 +17,8 @@ namespace Euler.Tests
         [InlineData(13, new long[] { 13 })]
         public void ShouldReturnPrimeFactorsForNumber(long number, long[] expected)
         {
-            var sut = new PrimeFactorFinder(number, new PrimeUtil());            
-            var actual = sut.GetPrimeFactors();
+            var sut = new PrimeFactorFinder(new PrimeUtil());            
+            var actual = sut.GetPrimeFactors(number);
 
             Assert.Equal(expected, actual);
         }
