@@ -28,17 +28,6 @@ namespace Euler.Tests
             var actual = this._sut.GetNthTriangularNumber(number);
             Assert.Equal(expected, actual);
         }
-
-        [Theory]
-        [InlineData(6, 28)]
-        [InlineData(12, 60)]
-        [InlineData(6, 12)]
-        [InlineData(100, 45360)]
-        public void GetDivisorsForNumber(int expected, long number)
-        {
-            var actual = this._sut.DivisorsForNumber(number);
-            Assert.Equal(expected, actual);
-        }
         
         [Theory]
         [InlineData(28, 6)]

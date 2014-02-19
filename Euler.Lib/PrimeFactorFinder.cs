@@ -21,6 +21,15 @@ namespace Euler.Lib
             return GetPrimes(new long[] {}, 2);
         }
 
+        public int DivisorsForNumber(long number)
+        {
+            var factors = this.GetPrimeFactors(number);
+
+            return factors.GroupBy(c => c)
+                          .Select(k => k.Count() + 1)
+                          .Aggregate(1, (acc, c) => acc *= c);
+        }
+
         private long[] GetPrimes(long[] factors, long prime)
         {
             if (this._number == 1) return factors;

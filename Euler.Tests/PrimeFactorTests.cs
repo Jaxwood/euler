@@ -22,5 +22,17 @@ namespace Euler.Tests
 
             Assert.Equal(expected, actual);
         }
+
+        [Theory]
+        [InlineData(6, 28)]
+        [InlineData(12, 60)]
+        [InlineData(6, 12)]
+        [InlineData(100, 45360)]
+        public void GetDivisorsForNumber(int expected, long number)
+        {
+            var sut = new PrimeFactorFinder(new PrimeUtil());
+            var actual = sut.DivisorsForNumber(number);
+            Assert.Equal(expected, actual);
+        }
     }
 }
