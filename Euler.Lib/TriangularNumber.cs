@@ -30,39 +30,10 @@ namespace Euler.Lib
             return natural;
         }
 
-        public bool IsTriangularNumber(long number)
-        {            
-            // (Sqrt[1+8x] - 1)/2.
-            var res = 1 + (8 * number);
-            
-            if (res % 2 == 0) return false;
-            
-            return IsPerfectSquare(res);
-        }
-
         public long GetNthTriangularNumber(long n)
         {
             // (n/2) × (n + 1) = number;
             return (n * (n + 1)) / 2;
-        }
-
-        private bool IsPerfectSquare(long input)
-        {
-            double root = Math.Sqrt(input);
-
-            long rootBits = BitConverter.DoubleToInt64Bits(root);
-            long lowerBound = (long)BitConverter.Int64BitsToDouble(rootBits - 1);
-            long upperBound = (long)BitConverter.Int64BitsToDouble(rootBits + 1);
-
-            for (long candidate = lowerBound; candidate <= upperBound; candidate++)
-            {
-                if (candidate * candidate == input)
-                {
-                    return true;
-                }
-            }
-
-            return false;
         }
 
         public int DivisorsForNumber(long number)

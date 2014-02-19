@@ -19,18 +19,6 @@ namespace Euler.Tests
         }
 
         [Theory]
-        [InlineData(false, 16)]
-        [InlineData(false, 30)]
-        [InlineData(true, 36)]
-        [InlineData(true, 1830)]
-        public void ShouldVerifyIfNumberIsATriangularNumber(bool expected, long number)
-        {
-            var actual = this._sut.IsTriangularNumber(number);
-
-            Assert.Equal(expected, actual);
-        }
-
-        [Theory]
         [InlineData(6, 3)]
         [InlineData(21, 6)]
         [InlineData(36, 8)]
@@ -38,18 +26,6 @@ namespace Euler.Tests
         public void ShouldGetTheNthTriangularNumber(long expected, long number)
         {
             var actual = this._sut.GetNthTriangularNumber(number);
-
-            Assert.Equal(expected, actual);
-        }
-
-        [Theory]
-        [InlineData(28, 6)]
-        [InlineData(6, 4)]
-        [InlineData(3, 2)]
-        public void ShouldGetTheLowestTriangularNumberFromDivisor(long expected, long divisor)
-        {
-            var actual = this._sut.GetLowestTriangularNumber(divisor);
-
             Assert.Equal(expected, actual);
         }
 
@@ -61,6 +37,16 @@ namespace Euler.Tests
         public void GetDivisorsForNumber(int expected, long number)
         {
             var actual = this._sut.DivisorsForNumber(number);
+            Assert.Equal(expected, actual);
+        }
+        
+        [Theory]
+        [InlineData(28, 6)]
+        [InlineData(6, 4)]
+        [InlineData(3, 2)]
+        public void ShouldGetTheLowestTriangularNumberFromDivisor(long expected, long divisor)
+        {
+            var actual = this._sut.GetLowestTriangularNumber(divisor);
             Assert.Equal(expected, actual);
         }
     }
