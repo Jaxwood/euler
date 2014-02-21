@@ -11,7 +11,7 @@ namespace Euler.Console
     class Program
     {
         static void Main(string[] args)
-        {
+        {            
             var nat = new NaturalNumberCalculator();
             System.Console.WriteLine(
                 "The sum of natural number between 1 1000 is {0}",
@@ -79,6 +79,11 @@ namespace Euler.Console
             System.Console.WriteLine(
                 "Sum all 50 digits number is {0}",
                 sumDigitProcessor.Sum(GetInput()));
+            
+            var collatzTermsFinder = new CollatzTermsFinder();            
+            System.Console.WriteLine(
+                "Largest number with most term below 1.000.000 is {0}",
+                collatzTermsFinder.GetLargestTermBelowNumber(Convert.ToInt32(Math.Pow(10,6))));
 
             System.Console.ReadLine();
         }

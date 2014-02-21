@@ -46,6 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CollatzTests.cs" />
     <Compile Include="GridProductFinderTests.cs" />
     <Compile Include="LargestProductFinderTests.cs" />
     <Compile Include="LowestDividableNumberFinderTests.cs" />
