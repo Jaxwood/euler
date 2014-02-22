@@ -43,9 +43,14 @@
     <Compile Include="CollatzTermsFinder.cs" />
     <Compile Include="FibonacciGenerator.cs" />
     <Compile Include="GridProductFinder.cs" />
+    <Compile Include="IAccept.cs" />
+    <Compile Include="IVisitor.cs" />
     <Compile Include="LargestProductFinder.cs" />
+    <Compile Include="Lattice.cs" />
     <Compile Include="LowestDividableNumberFinder.cs" />
     <Compile Include="NaturalNumberCalculator.cs" />
+    <Compile Include="Node.cs" />
+    <Compile Include="NodeFactory.cs" />
     <Compile Include="PalindromeFinder.cs" />
     <Compile Include="PrimeFactorFinder.cs" />
     <Compile Include="PrimeFinder.cs" />

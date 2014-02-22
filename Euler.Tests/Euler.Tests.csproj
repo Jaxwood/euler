@@ -49,9 +49,13 @@
     <Compile Include="CollatzTests.cs" />
     <Compile Include="GridProductFinderTests.cs" />
     <Compile Include="LargestProductFinderTests.cs" />
+    <Compile Include="LatticeTests.cs" />
     <Compile Include="LowestDividableNumberFinderTests.cs" />
     <Compile Include="NaturalNumberCalculatorTests.cs" />
     <Compile Include="FibonacciGeneratorTests.cs" />
+    <Compile Include="NodeCountVisitor.cs" />
+    <Compile Include="NodeFactoryTests.cs" />
+    <Compile Include="NodeTests.cs" />
     <Compile Include="PalindromeFinderTests.cs" />
     <Compile Include="PrimeFactorTests.cs" />
     <Compile Include="PrimeFinderTests.cs" />
