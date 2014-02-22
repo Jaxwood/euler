@@ -1,50 +1,36 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 
 namespace Euler.Lib
 {
     public class Lattice
     {
+        // binomical coefficient
+        // n! / ((n-k)! k!)
 
-        private bool _increment = true;
-        private int _size;
-        
-        public Lattice(int size)
+        public BigInteger GetPaths(int a, int b)
         {
-            this._size = size;
+            var n = a + b;
+            var k = a;
+
+            var nfac = Enumerable.Range(1, n)
+                                 .Select(c => Convert.ToInt64(c))
+                                 .Aggregate(BigInteger.Parse("1"), (acc, i) => BigInteger.Multiply(acc, i));
+
+
+            var nkfac = Enumerable.Range(1, n - k)
+                                  .Select(c => Convert.ToInt64(c))
+                                  .Aggregate(BigInteger.Parse("1"), (acc, i) => BigInteger.Multiply(acc, i));
+            
+            
+            var kfac = Enumerable.Range(1, k)
+                                 .Select(c => Convert.ToInt64(c))
+                                 .Aggregate(BigInteger.Parse("1"), (acc, i) => BigInteger.Multiply(acc, i));
+
+            return BigInteger.Divide(nfac, BigInteger.Multiply(nkfac, kfac));
         }
-
-        public int GetPaths()
-        {
-            return 0;
-        }
-
-
-        private Node AddNodes(Node node, int times)
-        {
-            if (times == 0) return node;
-            if (times > this._size) this._increment = false;
-
-            for (int i = 0; i < times; i++)
-            {
-                var child = new Node();
-                child.Parents.Add(node);
-                node.Children.Add(child);
-            }
-
-            if ( this._increment )
-                ++times;
-            else
-                --times;
-
-            foreach (var n in node.Children)
-            {
-                return AddNodes(n, times);
-            }
-
-            return node;
-        }        
     }
 }

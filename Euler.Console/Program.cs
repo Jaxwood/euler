@@ -84,6 +84,11 @@ namespace Euler.Console
             System.Console.WriteLine(
                 "Largest number with most term below 1.000.000 is {0}",
                 collatzTermsFinder.GetLargestTermBelowNumber(Convert.ToInt32(Math.Pow(10,6))));
+            
+            var lattice = new Lattice();
+            System.Console.WriteLine(
+                "Number of path through 20 x 20 grid is {0}",
+                lattice.GetPaths(20, 20));
 
             System.Console.ReadLine();
         }
