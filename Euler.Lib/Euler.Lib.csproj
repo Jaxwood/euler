@@ -46,6 +46,7 @@
     <Compile Include="LargestProductFinder.cs" />
     <Compile Include="Lattice.cs" />
     <Compile Include="LowestDividableNumberFinder.cs" />
+    <Compile Include="MathExtensions.cs" />
     <Compile Include="NaturalNumberCalculator.cs" />
     <Compile Include="PalindromeFinder.cs" />
     <Compile Include="PrimeFactorFinder.cs" />

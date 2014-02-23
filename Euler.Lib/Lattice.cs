@@ -16,21 +16,16 @@ namespace Euler.Lib
             var n = a + b;
             var k = a;
 
-            var nfac = Enumerable.Range(1, n)
-                                 .Select(c => Convert.ToInt64(c))
-                                 .Aggregate(BigInteger.Parse("1"), (acc, i) => BigInteger.Multiply(acc, i));
+            var nFac = Enumerable.Range(1, n)                                 
+                                 .Factorial();
 
-
-            var nkfac = Enumerable.Range(1, n - k)
-                                  .Select(c => Convert.ToInt64(c))
-                                  .Aggregate(BigInteger.Parse("1"), (acc, i) => BigInteger.Multiply(acc, i));
+            var nkFac = Enumerable.Range(1, n - k)                                  
+                                  .Factorial();
             
-            
-            var kfac = Enumerable.Range(1, k)
-                                 .Select(c => Convert.ToInt64(c))
-                                 .Aggregate(BigInteger.Parse("1"), (acc, i) => BigInteger.Multiply(acc, i));
+            var kFac = Enumerable.Range(1, k)                                 
+                                 .Factorial();
 
-            return BigInteger.Divide(nfac, BigInteger.Multiply(nkfac, kfac));
+            return BigInteger.Divide(nFac, BigInteger.Multiply(nkFac, kFac));
         }
     }
 }
