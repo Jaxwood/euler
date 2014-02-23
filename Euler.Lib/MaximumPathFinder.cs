@@ -9,6 +9,17 @@ namespace Euler.Lib
     {
         private int _index;
         private int _take = 2;
+        private readonly int _lookahead;
+
+        public MaximumPathFinder(int lookahead)
+        {
+            this._lookahead = lookahead;
+        }
+
+        public MaximumPathFinder()
+        {
+            this._lookahead = 4;
+        }
 
         public int GetMax(int[][] triangle)
         {
@@ -46,29 +57,23 @@ namespace Euler.Lib
                 return candidates.Max(); 
             }
 
-            for (int i = 0; i < candidates.Count(); i++)
+            for (int i = 0; i < 2; i++)
             {
-                int nextNextValue = 0;
-                int nextNextNextValue = 0;
-                int nextNextNextNextValue = 0;
-                var nextValue = this.GetNextValue(triangle[current + 1], Array.IndexOf(triangle[current], candidates[i]));
-                if ( length > current + 2)
-                { 
-                    nextNextValue = this.GetNextValue(triangle[current + 2], Array.IndexOf(triangle[current+1], nextValue));
-                }
-                if (length > current + 3)
+                var previous = candidates[i];
+                var sum = previous;
+
+                for (int j = 0; j < this._lookahead; j++)
                 {
-                    nextNextNextValue = this.GetNextValue(triangle[current + 3], Array.IndexOf(triangle[current + 2], nextNextValue));
-                }
-                if (length > current + 4)
-                {
-                    nextNextNextNextValue = this.GetNextValue(triangle[current + 4], Array.IndexOf(triangle[current + 3], nextNextNextValue));
-                }
-                var tmp = candidates[i] + nextValue + nextNextValue + nextNextNextValue + nextNextNextNextValue;
+                    if (length <= (current + j + 1)) break;
+                    
+                    var value = this.GetNextValue(triangle[(current + (j+1))], Array.IndexOf(triangle[current + j], previous));
+                    previous = value;
+                    sum += value;
+                }               
                             
-                if (tmp > best)
+                if (sum > best)
                 {
-                    best = tmp;
+                    best = sum;
                     index = i;
                 }
             }
