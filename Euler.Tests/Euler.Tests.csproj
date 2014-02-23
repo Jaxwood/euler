@@ -51,6 +51,7 @@
     <Compile Include="LargestProductFinderTests.cs" />
     <Compile Include="LatticeTests.cs" />
     <Compile Include="LowestDividableNumberFinderTests.cs" />
+    <Compile Include="MaximumPathTests.cs" />
     <Compile Include="NaturalNumberCalculatorTests.cs" />
     <Compile Include="FibonacciGeneratorTests.cs" />
     <Compile Include="NumberCounterTests.cs" />
