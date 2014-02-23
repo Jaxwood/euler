@@ -8,7 +8,7 @@ namespace Euler.Lib
 {
     public class Lattice
     {
-        // binomical coefficient
+        // binomial coefficient
         // n! / ((n-k)! k!)
 
         public BigInteger GetPaths(int a, int b)
