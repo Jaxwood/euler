@@ -11,7 +11,7 @@ namespace Euler.Console
     class Program
     {
         static void Main(string[] args)
-        {         
+        {            
             var nat = new NaturalNumberCalculator();
             System.Console.WriteLine(
                 "The sum of natural number between 1 1000 is {0}",
@@ -74,22 +74,22 @@ namespace Euler.Console
             System.Console.WriteLine(
                 "Lowest triangular number with 500 divisors is {0}",
                 triangularNumber.GetLowestTriangularNumber(500));
-            
-            var sumDigitProcessor = new SumDigitProcessor(50);            
+
+            var sumDigitProcessor = new SumDigitProcessor(50);
             System.Console.WriteLine(
                 "Sum all 50 digits number is {0}",
                 sumDigitProcessor.Sum(GetInput()));
-            
-            var collatzTermsFinder = new CollatzTermsFinder();            
+
+            var collatzTermsFinder = new CollatzTermsFinder();
             System.Console.WriteLine(
                 "Largest number with most term below 1.000.000 is {0}",
-                collatzTermsFinder.GetLargestTermBelowNumber(Convert.ToInt32(Math.Pow(10,6))));
-            
+                collatzTermsFinder.GetLargestTermBelowNumber(Convert.ToInt32(Math.Pow(10, 6))));
+
             var lattice = new Lattice();
             System.Console.WriteLine(
                 "Number of path through 20 x 20 grid is {0}",
                 lattice.GetPaths(20, 20));
-            
+
             var sumOfPow = new SumOfPow(2);
             System.Console.WriteLine(
                 "The sum of digits of 2^1000 is {0}",
@@ -99,6 +99,11 @@ namespace Euler.Console
             System.Console.WriteLine(
                 "Number of letter from 1-1000 is {0}",
                 numberCounter.GetTextCount(1, 1000));
+            
+            var maximumPathFinder = new MaximumPathFinder();
+            System.Console.WriteLine(
+                "The maximum path of triangle is {0}",
+                maximumPathFinder.GetMax(GetTriangleData()));
 
             System.Console.ReadLine();
         }
@@ -231,6 +236,28 @@ namespace Euler.Console
                 {20,69,36,41,72,30,23,88,34,62,99,69,82,67,59,85,74,04,36,16 },
                 {20,73,35,29,78,31,90,01,74,31,49,71,48,86,81,16,23,57,05,54 },
                 {01,70,54,71,83,51,54,69,16,92,33,48,61,43,52,01,89,19,67,48 }
+            };
+        }
+
+        private static int[][] GetTriangleData()
+        {
+            return new int[][] 
+            {
+                new int[] {75},
+                new int[] {95,64},
+                new int[] {17,47,82},
+                new int[] {18,35,87,10},
+                new int[] {20,04,82,47,65},
+                new int[] {19,01,23,75,03,34},
+                new int[] {88,02,77,73,07,63,67},
+                new int[] {99,65,04,28,06,16,70,92},
+                new int[] {41,41,26,56,83,40,80,70,33},
+                new int[] {41,48,72,33,47,32,37,16,94,29},
+                new int[] {53,71,44,65,25,43,91,52,97,51,14},
+                new int[] {70,11,33,28,77,73,17,78,39,68,17,57},
+                new int[] {91,71,52,38,17,14,91,43,58,50,27,29,48},
+                new int[] {63,66,04,68,89,53,67,30,73,16,69,87,40,31},
+                new int[] {04,62,98,27,23,09,70,98,73,93,38,53,60,04,23}
             };
         }
     }
