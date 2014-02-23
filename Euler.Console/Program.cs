@@ -12,6 +12,7 @@ namespace Euler.Console
     {
         static void Main(string[] args)
         {            
+            /*
             var nat = new NaturalNumberCalculator();
             System.Console.WriteLine(
                 "The sum of natural number between 1 1000 is {0}",
@@ -89,6 +90,11 @@ namespace Euler.Console
             System.Console.WriteLine(
                 "Number of path through 20 x 20 grid is {0}",
                 lattice.GetPaths(20, 20));
+            */
+            var sumOfPow = new SumOfPow(2);
+            System.Console.WriteLine(
+                "The sum of digits of 2^1000 is {0}",
+                sumOfPow.GetSum(1000));
 
             System.Console.ReadLine();
         }
