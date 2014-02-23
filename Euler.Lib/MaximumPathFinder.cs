@@ -51,12 +51,6 @@ namespace Euler.Lib
             var candidates = triangle[current].Skip(this._index).Take(this._take).ToArray();
             var length = triangle.Length;
 
-            // the last array
-            if (current + 1 == length)
-            {
-                return candidates.Max(); 
-            }
-
             for (int i = 0; i < 2; i++)
             {
                 var previous = candidates[i];
