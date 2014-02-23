@@ -53,6 +53,8 @@
     <Compile Include="LowestDividableNumberFinderTests.cs" />
     <Compile Include="NaturalNumberCalculatorTests.cs" />
     <Compile Include="FibonacciGeneratorTests.cs" />
+    <Compile Include="NumberCounterTests.cs" />
+    <Compile Include="NumberToLetterTests.cs" />
     <Compile Include="PalindromeFinderTests.cs" />
     <Compile Include="PrimeFactorTests.cs" />
     <Compile Include="PrimeFinderTests.cs" />
