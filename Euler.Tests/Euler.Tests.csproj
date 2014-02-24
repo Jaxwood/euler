@@ -57,6 +57,7 @@
     <Compile Include="NaturalNumberCalculatorTests.cs" />
     <Compile Include="FibonacciGeneratorTests.cs" />
     <Compile Include="NumberCounterTests.cs" />
+    <Compile Include="NumberScorerTests.cs" />
     <Compile Include="NumberToLetterTests.cs" />
     <Compile Include="PalindromeFinderTests.cs" />
     <Compile Include="PrimeFactorTests.cs" />

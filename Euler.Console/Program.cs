@@ -2,8 +2,10 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Euler.Console
@@ -12,6 +14,7 @@ namespace Euler.Console
     {
         static void Main(string[] args)
         {      
+            /*
             var nat = new NaturalNumberCalculator();
             System.Console.WriteLine(
                 "The sum of natural number between 1 1000 is {0}",
@@ -116,12 +119,23 @@ namespace Euler.Console
                 factorialSumFinder.GetFactorialSum(100));
 
             var amicableNumbers = new AmicableNumberFinder();
-            var result = Enumerable.Range(1, 10000).Where(c => amicableNumbers.IsAmicableNumber(c));
             System.Console.WriteLine(
                 "The sum of all amicable numbers below 10000 is {0}",
-                result.Sum());
+                Enumerable.Range(1, 10000).Where(c => amicableNumbers.IsAmicableNumber(c)).Sum());
+            */
+            var numberScorer = new NumberScorer(GetNames());
+            System.Console.WriteLine(
+                "The sum of all amicable numbers below 10000 is {0}",
+                numberScorer.ScoreNames());
 
             System.Console.ReadLine();
+        }
+
+        private static string[] GetNames()
+        {
+            var names = File.ReadAllText(Environment.CurrentDirectory + "\\names.txt").Split(',');
+
+            return names.Select(c => c.Replace(@"""", "")).ToArray();
         }
 
         private static string GetInput()

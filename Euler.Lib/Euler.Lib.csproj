@@ -53,6 +53,7 @@
     <Compile Include="MaximumPathFinder.cs" />
     <Compile Include="NaturalNumberCalculator.cs" />
     <Compile Include="NumberCounter.cs" />
+    <Compile Include="NumberScorer.cs" />
     <Compile Include="NumberToLetter.cs" />
     <Compile Include="PalindromeFinder.cs" />
     <Compile Include="PrimeFactorFinder.cs" />
