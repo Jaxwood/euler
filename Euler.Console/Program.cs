@@ -11,7 +11,7 @@ namespace Euler.Console
     class Program
     {
         static void Main(string[] args)
-        {                    
+        {                 
             var nat = new NaturalNumberCalculator();
             System.Console.WriteLine(
                 "The sum of natural number between 1 1000 is {0}",
@@ -104,7 +104,12 @@ namespace Euler.Console
             System.Console.WriteLine(
                 "The maximum path of triangle is {0}",
                 maximumPathFinder.GetMax(GetTriangleData()));
-
+            
+            var dateFinder = new DateFinder();
+            System.Console.WriteLine(
+                "No of Sundays is {0}",
+                dateFinder.GetMonthsWithDay(DateTime.Parse("1901-01-01"), DateTime.Parse("2000-12-31"), DayOfWeek.Sunday));
+            
             System.Console.ReadLine();
         }
 

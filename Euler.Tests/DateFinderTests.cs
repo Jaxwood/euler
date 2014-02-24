@@ -13,7 +13,8 @@ namespace Euler.Tests
     {
         [Theory]
         [InlineData(2, "1901-01-01", "1902-01-01", DayOfWeek.Sunday)]
-        [InlineData(2, "2013-01-01", "2014-01-01", DayOfWeek.Sunday)] 
+        [InlineData(2, "2013-01-01", "2014-01-01", DayOfWeek.Sunday)]
+        [InlineData(2, "2013-01-01", "2013-12-31", DayOfWeek.Sunday)] 
         public void ShouldReturnTheNumberOfSundaysOnDate(int expected, string from, string to, DayOfWeek day)
         {
             var sut = new DateFinder();
@@ -22,6 +23,12 @@ namespace Euler.Tests
             var actual = sut.GetMonthsWithDay(DateTime.Parse(from), DateTime.Parse(to), day);
 
             Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void CanParse()
+        {
+            Assert.DoesNotThrow(delegate { DateTime.Parse("2013-12-31"); });
         }
     }
 }

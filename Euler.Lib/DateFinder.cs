@@ -11,7 +11,7 @@ namespace Euler.Lib
         {
             int cnt = 0;
 
-            while (from != to)
+            while (from < to)
             {
                 if (from.DayOfWeek == day)
                 {
