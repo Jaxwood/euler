@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CollatzTests.cs" />
+    <Compile Include="FactorialSumFinderTests.cs" />
     <Compile Include="GridProductFinderTests.cs" />
     <Compile Include="LargestProductFinderTests.cs" />
     <Compile Include="LatticeTests.cs" />

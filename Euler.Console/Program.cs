@@ -110,6 +110,11 @@ namespace Euler.Console
                 "No of Sundays is {0}",
                 dateFinder.GetMonthsWithDay(DateTime.Parse("1901-01-01"), DateTime.Parse("2000-12-31"), DayOfWeek.Sunday));
             
+            var factorialSumFinder = new FactorialSumFinder();
+            System.Console.WriteLine(
+                "The sum of the digits of 100! is {0}",
+                factorialSumFinder.GetFactorialSum(100));
+
             System.Console.ReadLine();
         }
 
