@@ -30,6 +30,14 @@ namespace Euler.Lib
                           .Aggregate(1, (acc, c) => acc *= c);
         }
 
+        public long GetSumOfDivisors(int number)
+        {
+            var primeFactors = this.GetPrimeFactors(number);
+            return primeFactors.GroupBy(c => c)
+                               .Select( c => Convert.ToInt64(1) + c.Select((d,i) => (long)Math.Pow(d, i+1)).Sum())
+                               .Aggregate(Convert.ToInt64(1), (acc, c) => acc *= c);
+        }
+
         private long[] GetPrimes(long[] factors, long prime)
         {
             if (this._number == 1) return factors;
@@ -67,8 +75,6 @@ namespace Euler.Lib
         private bool IsSameAsNumber(long prime)
         {
             return prime == this._number;
-        }
-
-        
+        }        
     }
 }

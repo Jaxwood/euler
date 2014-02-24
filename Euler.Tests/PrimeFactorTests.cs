@@ -34,5 +34,16 @@ namespace Euler.Tests
             var actual = sut.DivisorsForNumber(number);
             Assert.Equal(expected, actual);
         }
+
+        [Theory]
+        [InlineData(504, 284)]
+        [InlineData(504, 220)]        
+        public void ShouldFindSumOfDivisors(int expected, int number)
+        {
+            var sut = new PrimeFactorFinder(new PrimeUtil());
+            var actual = sut.GetSumOfDivisors(number);
+
+            Assert.Equal(expected, actual);
+        }
     }
 }

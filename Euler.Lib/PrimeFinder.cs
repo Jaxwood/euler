@@ -20,6 +20,6 @@ namespace Euler.Lib
                              .Select(c => Convert.ToInt64(c))
                              .Where(c => primeUtil.IsPrime(c))
                              .Sum();
-        }
+        }        
     }
 }

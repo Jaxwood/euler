@@ -46,6 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AmicableNumberFinderTests.cs" />
     <Compile Include="CollatzTests.cs" />
     <Compile Include="FactorialSumFinderTests.cs" />
     <Compile Include="GridProductFinderTests.cs" />
