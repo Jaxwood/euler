@@ -65,6 +65,7 @@
     <Compile Include="SumDigitTests.cs" />
     <Compile Include="SumOfPowTests.cs" />
     <Compile Include="SumOfSquaresTests.cs" />
+    <Compile Include="DateFinderTests.cs" />
     <Compile Include="TriangularNumberTests.cs" />
   </ItemGroup>
   <ItemGroup>

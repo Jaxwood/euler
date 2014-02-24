@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CollatzTermsFinder.cs" />
+    <Compile Include="DateFinder.cs" />
     <Compile Include="FibonacciGenerator.cs" />
     <Compile Include="GridProductFinder.cs" />
     <Compile Include="LargestProductFinder.cs" />
