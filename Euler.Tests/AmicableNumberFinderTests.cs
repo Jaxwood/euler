@@ -19,7 +19,7 @@ namespace Euler.Tests
         [InlineData(false, 6)]
         public void ShouldFindVerifyIfNumberIsAmicable(bool expected, int number)
         {
-            var sut = new AmicableNumberFinder();
+            var sut = new AmicableNumberFinder(new MathUtil());
             var actual = sut.IsAmicableNumber(number);
 
             Assert.Equal(expected, actual);

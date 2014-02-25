@@ -8,20 +8,19 @@ namespace Euler.Lib
 {
     public class AmicableNumberFinder
     {
+        private MathUtil _mathUtil;
+        public AmicableNumberFinder(MathUtil util)
+        {
+            this._mathUtil = util;
+        }
+
         public bool IsAmicableNumber(int number)
         {
-            var divisorSum = this.GetSumOfDivisors(number);
+            var divisorSum = this._mathUtil.GetSumOfDivisors(number);
             
             if (divisorSum == number) return false;
 
-            return number == this.GetSumOfDivisors(divisorSum);
-        }
-
-        private int GetSumOfDivisors(int number)
-        {
-            return (from y in Enumerable.Range(1, (int) number / 2)
-                    where number % y == 0
-                    select y).Sum();
+            return number == this._mathUtil.GetSumOfDivisors(divisorSum);
         }
     }
 }

@@ -37,7 +37,7 @@ namespace Euler.Tests
 
         [Theory]
         [InlineData(504, 284)]
-        [InlineData(504, 220)]        
+        [InlineData(504, 220)]
         public void ShouldFindSumOfDivisors(int expected, int number)
         {
             var sut = new PrimeFactorFinder(new PrimeUtil());

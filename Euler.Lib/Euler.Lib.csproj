@@ -50,6 +50,7 @@
     <Compile Include="Lattice.cs" />
     <Compile Include="LowestDividableNumberFinder.cs" />
     <Compile Include="MathExtensions.cs" />
+    <Compile Include="MathUtil.cs" />
     <Compile Include="MaximumPathFinder.cs" />
     <Compile Include="NaturalNumberCalculator.cs" />
     <Compile Include="NumberCounter.cs" />

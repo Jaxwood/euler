@@ -117,7 +117,7 @@ namespace Euler.Console
                 "The sum of the digits of 100! is {0}",
                 factorialSumFinder.GetFactorialSum(100));
 
-            var amicableNumbers = new AmicableNumberFinder();
+            var amicableNumbers = new AmicableNumberFinder(new MathUtil());
             System.Console.WriteLine(
                 "The sum of all amicable numbers below 10000 is {0}",
                 Enumerable.Range(1, 10000).Where(c => amicableNumbers.IsAmicableNumber(c)).Sum());
