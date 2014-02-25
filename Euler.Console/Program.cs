@@ -14,7 +14,6 @@ namespace Euler.Console
     {
         static void Main(string[] args)
         {      
-            /*
             var nat = new NaturalNumberCalculator();
             System.Console.WriteLine(
                 "The sum of natural number between 1 1000 is {0}",
@@ -122,7 +121,7 @@ namespace Euler.Console
             System.Console.WriteLine(
                 "The sum of all amicable numbers below 10000 is {0}",
                 Enumerable.Range(1, 10000).Where(c => amicableNumbers.IsAmicableNumber(c)).Sum());
-            */
+            
             var numberScorer = new NumberScorer(GetNames());
             System.Console.WriteLine(
                 "The sum of all amicable numbers below 10000 is {0}",

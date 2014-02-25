@@ -12,7 +12,7 @@ namespace Euler.Lib
 
         public NumberScorer(string[] names)
         {
-            this._names = names.OrderBy(c => c).ToArray();
+            this._names = names.OrderBy(c => c, StringComparer.InvariantCultureIgnoreCase).ToArray();
         }
 
         public int NumberScore(string name)

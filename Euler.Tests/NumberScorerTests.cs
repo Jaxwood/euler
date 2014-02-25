@@ -31,8 +31,8 @@ namespace Euler.Tests
         }
 
         [Theory]
-        [InlineData(24, 8, "ABE")]
-        [InlineData(265, 53, "COLIN")]
+        [InlineData(16, 8, "ABE")]
+        [InlineData(212, 53, "COLIN")]
         public void ShouldScoreNumberToPlacementInList(int expected, int numberscore, string name)
         {
             var actual = this._sut.GetScore(name, numberscore);
@@ -41,12 +41,26 @@ namespace Euler.Tests
         }
 
         [Theory]
-        [InlineData(334)]
+        [InlineData(285)]
         public void ShouldScoreAllNames(int expected)
         {
             var actual = this._sut.ScoreNames();
 
             Assert.Equal(expected, actual);
+        }
+
+        [Fact]
+        public void ShouldScoreAndSortNames()
+        {
+            var sut = new NumberScorer(new string[] {
+                "C",
+                "A",
+                "AA",
+                "B"
+            });
+
+            var actual = sut.GetScore("B", 2);
+            Assert.Equal(6, actual);
         }
     }
 }
