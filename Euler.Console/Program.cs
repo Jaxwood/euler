@@ -126,7 +126,12 @@ namespace Euler.Console
             System.Console.WriteLine(
                 "The sum of all amicable numbers below 10000 is {0}",
                 numberScorer.ScoreNames());
-
+            
+            var abundantSum = new AbundantSum(new MathUtil());
+            System.Console.WriteLine(
+                "Th sum of positive integers that is not a sum of abundant numbers is {0}",
+                abundantSum.GetSumOfIntegersThatIsNotSumOfAbundantNumbers(28123));
+            
             System.Console.ReadLine();
         }
 

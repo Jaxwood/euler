@@ -20,5 +20,35 @@ namespace Euler.Tests
 
             Assert.Equal(expected, actual);
         }
+
+        [Theory]
+        [InlineData(new int[] { 24, 30, 32, 36, 38, 40 }, new int[] { 12, 18, 20 })]
+        public void ShouldFindPermutationsOfSumOfAbundantNumbers(int[] expected, int[] abundantNumbers)
+        {
+            var sut = new AbundantSum(new MathUtil());
+            var actual = sut.GetSumOfAbundantNumbers(abundantNumbers);
+
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
+        [InlineData(new int[] { 12, 18, 20, 24, 30, 36, 40 }, 40)]
+        public void ShouldFindAbundantNumbersInRange(int[] expected, int top)
+        {
+            var sut = new AbundantSum(new MathUtil());
+            var actual = sut.GetAbundantNumbers(top);
+
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
+        [InlineData(301, 25)]
+        public void ShouldFindIntegerThatIsNotASumOfAbundantNumbers(int expected, int top)
+        {
+            var sut = new AbundantSum(new MathUtil());
+            var actual = sut.GetSumOfIntegersThatIsNotSumOfAbundantNumbers(top);
+
+            Assert.Equal(expected, actual);
+        }
     }
 }
