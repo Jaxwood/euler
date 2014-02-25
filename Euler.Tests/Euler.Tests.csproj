@@ -46,6 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbundantSumTests.cs" />
     <Compile Include="AmicableNumberFinderTests.cs" />
     <Compile Include="CollatzTests.cs" />
     <Compile Include="FactorialSumFinderTests.cs" />
@@ -53,6 +54,7 @@
     <Compile Include="LargestProductFinderTests.cs" />
     <Compile Include="LatticeTests.cs" />
     <Compile Include="LowestDividableNumberFinderTests.cs" />
+    <Compile Include="MathUtilTests.cs" />
     <Compile Include="MaximumPathTests.cs" />
     <Compile Include="NaturalNumberCalculatorTests.cs" />
     <Compile Include="FibonacciGeneratorTests.cs" />
