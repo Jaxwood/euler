@@ -129,9 +129,14 @@ namespace Euler.Console
             
             var abundantSum = new AbundantSum(new MathUtil());
             System.Console.WriteLine(
-                "Th sum of positive integers that is not a sum of abundant numbers is {0}",
+                "The sum of positive integers that is not a sum of abundant numbers is {0}",
                 abundantSum.GetSumOfIntegersThatIsNotSumOfAbundantNumbers(28123));
             
+            var lexicographicPermutation = new LexicographicPermutation(new MathUtil());
+            System.Console.WriteLine(
+                "The millionth lexicographic permutation of the digits 0, 1, 2, 3, 4, 5, 6, 7, 8 and 9 is {0}",
+                lexicographicPermutation.GetPermutation(1234567890, 1000000));
+
             System.Console.ReadLine();
         }
 
