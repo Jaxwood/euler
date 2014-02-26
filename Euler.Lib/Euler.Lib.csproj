@@ -45,8 +45,11 @@
     <Compile Include="CollatzTermsFinder.cs" />
     <Compile Include="DateFinder.cs" />
     <Compile Include="FactorialSumFinder.cs" />
+    <Compile Include="Fibonacci.cs" />
     <Compile Include="FibonacciGenerator.cs" />
     <Compile Include="GridProductFinder.cs" />
+    <Compile Include="Specification\DigitSpecification.cs" />
+    <Compile Include="Specification\ISpecification.cs" />
     <Compile Include="LargestProductFinder.cs" />
     <Compile Include="Lattice.cs" />
     <Compile Include="LexicographicPermutation.cs" />

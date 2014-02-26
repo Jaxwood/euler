@@ -1,4 +1,5 @@
 ﻿using Euler.Lib;
+using Euler.Lib.Specification;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -14,6 +15,7 @@ namespace Euler.Console
     {
         static void Main(string[] args)
         {      
+            /*
             var nat = new NaturalNumberCalculator();
             System.Console.WriteLine(
                 "The sum of natural number between 1 1000 is {0}",
@@ -136,6 +138,12 @@ namespace Euler.Console
             System.Console.WriteLine(
                 "The millionth lexicographic permutation of the digits 0, 1, 2, 3, 4, 5, 6, 7, 8 and 9 is {0}",
                 lexicographicPermutation.GetPermutation(1234567890, 1000000));
+            */
+
+            var fibnacci = new Fibonacci();
+            System.Console.WriteLine(
+                "The first term in the Fibonacci sequence to contain 1000 digits is {0}",
+                fibnacci.GetUntil(new DigitSpecification(1000)));
 
             System.Console.ReadLine();
         }
