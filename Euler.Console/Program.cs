@@ -15,7 +15,6 @@ namespace Euler.Console
     {
         static void Main(string[] args)
         {      
-            /*
             var nat = new NaturalNumberCalculator();
             System.Console.WriteLine(
                 "The sum of natural number between 1 1000 is {0}",
@@ -24,10 +23,12 @@ namespace Euler.Console
                     Enumerable.Range(1, 999).ToArray()
                 ).Sum());
 
-            var fib = new FibonacciGenerator(4000000, x => x % 2 == 0);
+            var fib = new Fibonacci();
+            var fibSumSpec = new FibonacciSumSpecification(4000000);
+            fib.GetUntil(fibSumSpec);
             System.Console.WriteLine(
                 "Fibonacci whose values do not exceed four million - the sum of even valued terms: {0}",
-                fib.GetSum());
+                fibSumSpec.Result);
 
             var primeFactorFinder = new PrimeFactorFinder(new PrimeUtil());
             System.Console.WriteLine(
@@ -138,7 +139,6 @@ namespace Euler.Console
             System.Console.WriteLine(
                 "The millionth lexicographic permutation of the digits 0, 1, 2, 3, 4, 5, 6, 7, 8 and 9 is {0}",
                 lexicographicPermutation.GetPermutation(1234567890, 1000000));
-            */
 
             var fibnacci = new Fibonacci();
             System.Console.WriteLine(

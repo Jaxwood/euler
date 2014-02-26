@@ -9,5 +9,6 @@ namespace Euler.Lib.Specification
     public interface ISpecification<T> where T : struct
     {
         bool IsSatisfiedBy(T cadidate);
+        T Result { get; }
     }
 }

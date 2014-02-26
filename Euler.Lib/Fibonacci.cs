@@ -35,6 +35,7 @@ namespace Euler.Lib
                 this._memorizer.Add(term, fib);
                 return fib;
             }
+
             if (term == 1) return 1;
             
             return 0;
@@ -49,7 +50,7 @@ namespace Euler.Lib
                 fib = this.Fib(term++);
             }
 
-            return term-1;
+            return fib;
         }
     }
 }

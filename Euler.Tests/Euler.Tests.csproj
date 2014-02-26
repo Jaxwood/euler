@@ -60,7 +60,6 @@
     <Compile Include="MathUtilTests.cs" />
     <Compile Include="MaximumPathTests.cs" />
     <Compile Include="NaturalNumberCalculatorTests.cs" />
-    <Compile Include="FibonacciGeneratorTests.cs" />
     <Compile Include="NumberCounterTests.cs" />
     <Compile Include="NumberScorerTests.cs" />
     <Compile Include="NumberToLetterTests.cs" />

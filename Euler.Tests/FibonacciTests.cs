@@ -30,9 +30,22 @@ namespace Euler.Tests
         public void ShouldGenerateFibonacciNumbersUntilDigitsReachSize(int expected, int size)
         {
             var sut = new Fibonacci();
-            var actual = sut.GetUntil(new DigitSpecification(size));
+            var spec = new DigitSpecification(size);
+            var actual = sut.GetUntil(spec);
 
-            Assert.Equal(expected, actual);
+            Assert.Equal(expected, spec.Result);
+        }
+
+        [Theory]        
+        [InlineData(10, 10)]
+        [InlineData(44, 40)]
+        public void ShouldSumEvenNumberFibonacciNumbersUntilMax(int expected, int max)
+        {
+            var sut = new Fibonacci();
+            var spec = new FibonacciSumSpecification(max);
+            var actual = sut.GetUntil(spec);
+
+            Assert.Equal(expected, spec.Result);
         }
     }
 }
