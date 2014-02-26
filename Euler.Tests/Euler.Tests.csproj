@@ -53,6 +53,7 @@
     <Compile Include="GridProductFinderTests.cs" />
     <Compile Include="LargestProductFinderTests.cs" />
     <Compile Include="LatticeTests.cs" />
+    <Compile Include="LexicographicPermutationTests.cs" />
     <Compile Include="LowestDividableNumberFinderTests.cs" />
     <Compile Include="MathUtilTests.cs" />
     <Compile Include="MaximumPathTests.cs" />

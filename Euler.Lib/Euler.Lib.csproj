@@ -49,6 +49,7 @@
     <Compile Include="GridProductFinder.cs" />
     <Compile Include="LargestProductFinder.cs" />
     <Compile Include="Lattice.cs" />
+    <Compile Include="LexicographicPermutation.cs" />
     <Compile Include="LowestDividableNumberFinder.cs" />
     <Compile Include="MathExtensions.cs" />
     <Compile Include="MathUtil.cs" />

@@ -11,16 +11,11 @@ namespace Euler.Tests
 {
     public class PalindromeFinderTests
     {
-        [Theory]
-        [InlineData(121, new int[] { 1, 2, 1 })]
-        [InlineData(321, new int[] { 3, 2, 1 })]
-        [InlineData(32211, new int[] { 3, 2, 2, 1, 1 })]
-        public void CanFindDigitsOfANumber(int number, int [] expected)
+        private PalindromeFinder _sut;
+
+        public PalindromeFinderTests()
         {
-            var sut = new PalindromeFinder();
-            var actual = sut.GetDigits(number);
-            
-            Assert.Equal(expected, actual);
+            this._sut = new PalindromeFinder(new MathUtil());
         }
 
         [Theory]
@@ -30,8 +25,7 @@ namespace Euler.Tests
         [InlineData(9009, true)]
         public void CanVerifyIfNumberIsAPalindrome(int number, bool expected)
         {
-            var sut = new PalindromeFinder();
-            var actual = sut.IsPalindrome(number);
+            var actual = _sut.IsPalindrome(number);
             
             Assert.Equal(expected, actual);
         }
@@ -42,8 +36,7 @@ namespace Euler.Tests
         [InlineData(5, 99999)]
         public void ShouldReturnHighestNumberMadeOfDigits(int digits, int expected)
         {
-            var sut = new PalindromeFinder();
-            var actual = sut.GetMaxNumber(digits);
+            var actual = _sut.GetMaxNumber(digits);
 
             Assert.Equal(expected, actual);
         }
@@ -54,8 +47,7 @@ namespace Euler.Tests
         [InlineData(5, 1409865409)]
         public void ShouldReturnProductOfTheHigestNumber(int digits, int expected)
         {
-            var sut = new PalindromeFinder();
-            var actual = sut.GetProduct(digits);
+            var actual = _sut.GetProduct(digits);
 
             Assert.Equal(expected, actual);
         }
@@ -65,8 +57,7 @@ namespace Euler.Tests
         [InlineData(new int[] { 0, 0 }, 2, 9779)]
         public void ShouldFindHigestProductOfNumber(int[] expected, int digits, int number)
         {
-            var sut = new PalindromeFinder();
-            var actual = sut.GetLargestProductOfNumber(digits, number);
+            var actual = _sut.GetLargestProductOfNumber(digits, number);
 
             Assert.Equal(expected, actual);
         }
@@ -75,8 +66,7 @@ namespace Euler.Tests
         [InlineData(9009, 2)]            
         public void ShouldReturnLargestPalindromeOfTwoDigitsProduct(int expected, int digits)
         {            
-            var sut = new PalindromeFinder();
-            var actual = sut.GetLargestPalindrome(digits);
+            var actual = _sut.GetLargestPalindrome(digits);
 
             Assert.Equal(expected, actual);
         }

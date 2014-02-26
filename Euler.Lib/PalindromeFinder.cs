@@ -7,6 +7,12 @@ namespace Euler.Lib
 {
     public class PalindromeFinder
     {
+        private MathUtil _mathUtil;
+        public PalindromeFinder(MathUtil mathUtil)
+        {
+            this._mathUtil = mathUtil;
+        }
+
         public int GetLargestPalindrome(int digits)
         {
             var highestFoundProduct = new int[] { 0, 0 };
@@ -32,27 +38,12 @@ namespace Euler.Lib
             }
 
             return palindrome;
-        }
-
-        public int[] GetDigits(int number)
-        {
-            List<int> arr = new List<int>();
-
-            while(number >= 1)
-            {
-                arr.Add(number % 10);
-                number = number / 10;
-            }
-            
-            arr.Reverse();
-            
-            return arr.ToArray();
-        }
+        }        
 
         public bool IsPalindrome(int number)
         {
             bool isPalindrome = true;            
-            var digits = this.GetDigits(number);
+            var digits = this._mathUtil.GetDigits(number);
 
             for (int i = 0; i < digits.Length / 2; i++)
             { 
