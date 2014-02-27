@@ -1,13 +1,8 @@
 ﻿using Euler.Lib;
 using Euler.Lib.Specification;
 using System;
-using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace Euler.Console
 {
@@ -144,6 +139,11 @@ namespace Euler.Console
             System.Console.WriteLine(
                 "The first term in the Fibonacci sequence to contain 1000 digits is {0}",
                 fibnacci.GetUntil(new DigitSpecification(1000)));
+            
+            var reciprocal = new ReciprocalCycle(new PrimeFactorFinder(new PrimeUtil()));
+            System.Console.WriteLine(
+                "The value of d < 1000 for which 1/d contains the longest recurring cycle in its decimal fraction part is {0}",
+                reciprocal.GetLargestRecurring(1000));
 
             System.Console.ReadLine();
         }

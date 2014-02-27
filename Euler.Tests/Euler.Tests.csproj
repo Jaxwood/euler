@@ -69,6 +69,7 @@
     <Compile Include="PrimeGeneratorTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PythagoreanTripletTests.cs" />
+    <Compile Include="ReciprocalCycleTests.cs" />
     <Compile Include="SumDigitTests.cs" />
     <Compile Include="SumOfPowTests.cs" />
     <Compile Include="SumOfSquaresTests.cs" />

@@ -47,6 +47,7 @@
     <Compile Include="FactorialSumFinder.cs" />
     <Compile Include="Fibonacci.cs" />
     <Compile Include="GridProductFinder.cs" />
+    <Compile Include="ReciprocalCycle.cs" />
     <Compile Include="Specification\DigitSpecification.cs" />
     <Compile Include="Specification\FibonacciSumSpecification.cs" />
     <Compile Include="Specification\ISpecification.cs" />
