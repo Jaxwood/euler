@@ -143,7 +143,12 @@ namespace Euler.Console
             var reciprocal = new ReciprocalCycle(new PrimeFactorFinder(new PrimeUtil()));
             System.Console.WriteLine(
                 "The value of d < 1000 for which 1/d contains the longest recurring cycle in its decimal fraction part is {0}",
-                reciprocal.GetLargestRecurring(1000));
+                reciprocal.GetLargestRecurring(1000));            
+
+            var quadraticPrime = new QuadraticPrime(new PrimeUtil());
+            System.Console.WriteLine(
+                "The product of the coefficients, a and b, for the quadratic expression that produces the maximum number of primes for consecutive values of n, starting with n = 0 is {0}",
+                quadraticPrime.GetProduct(-1000, 2001, -1000, 2001));
 
             System.Console.ReadLine();
         }
