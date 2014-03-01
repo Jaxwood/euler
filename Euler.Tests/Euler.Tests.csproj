@@ -62,6 +62,7 @@
     <Compile Include="NaturalNumberCalculatorTests.cs" />
     <Compile Include="NumberCounterTests.cs" />
     <Compile Include="NumberScorerTests.cs" />
+    <Compile Include="NumberSpiralDiagonalTests.cs" />
     <Compile Include="NumberToLetterTests.cs" />
     <Compile Include="PalindromeFinderTests.cs" />
     <Compile Include="PrimeFactorTests.cs" />

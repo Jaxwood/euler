@@ -150,6 +150,11 @@ namespace Euler.Console
                 "The product of the coefficients, a and b, for the quadratic expression that produces the maximum number of primes for consecutive values of n, starting with n = 0 is {0}",
                 quadraticPrime.GetProduct(-1000, 2001, -1000, 2001));
 
+            var numberSpiralDiagonal = new NumberSpiralDiagonal();
+            System.Console.WriteLine(
+                "The sum of the numbers on the diagonals in a 1001 by 1001 spiral form is {0}",
+                numberSpiralDiagonal.GetDiagonalSum(1001));
+
             System.Console.ReadLine();
         }
 
