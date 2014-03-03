@@ -49,6 +49,7 @@
     <Compile Include="AbundantSumTests.cs" />
     <Compile Include="AmicableNumberFinderTests.cs" />
     <Compile Include="CollatzTests.cs" />
+    <Compile Include="DigitPowerFinderTests.cs" />
     <Compile Include="DigitsSpecificationTests.cs" />
     <Compile Include="DistinctPowerTests.cs" />
     <Compile Include="FactorialSumFinderTests.cs" />
